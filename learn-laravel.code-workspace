@@ -1,6 +1,10 @@
 {
 	"folders": [
 		{
+			"name": "📋 DOCUMENT",
+			"path": "../document"
+		},
+		{
 			"name": "📚 PROJECT",
 			"path": "."
 		}
