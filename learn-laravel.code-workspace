@@ -8,6 +8,18 @@
 			"name": "📚 PROJECT",
 			"path": "."
 		},
+		{	"name": "🚀 🚀 ROUTES LARAVEL",
+			"path": "./routes"
+
+		},
+		{	"name": "🛢️ 🛢️ DATABASE LARAVEL",
+			"path": "./database"
+
+		},
+		{	"name": "📚 📚 APP LARAVEL",
+			"path": "./app"
+
+		},
 		{
 			"name": "⚡ ⚡ VITE PROJECT",
 			"path": "./vite"
