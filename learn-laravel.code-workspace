@@ -7,6 +7,10 @@
 		{
 			"name": "📚 PROJECT",
 			"path": "."
+		},
+		{
+			"name": "⚡ ⚡ VITE PROJECT",
+			"path": "./vite"
 		}
 	],
 	"settings": {}
