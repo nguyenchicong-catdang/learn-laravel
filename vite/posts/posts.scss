@@ -1,0 +1,11 @@
+// post stores styles
+.post-store {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    form {
+        width: 50%;
+        display: grid;
+        gap: 10px;
+    }
+}

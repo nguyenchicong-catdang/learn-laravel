@@ -20,10 +20,22 @@
 			"path": "./app"
 
 		},
-		{
+		{	"name": "📦 📦 SRC LARAVEL",
+			"path": "./src"
+
+		},
+				{
 			"name": "⚡ ⚡ VITE PROJECT",
 			"path": "./vite"
-		}
+		},
+		{	"name": "🛠️ 🛠️ 🛠️ RUN SRC LARAVEL",
+			"path": "./src/Posts"
+
+		},
+		{	"name": "⚛️ ⚛️ ⚛️ RUN REACT LARAVEL",
+			"path": "./vite/posts"
+
+		},
 	],
 	"settings": {}
 }

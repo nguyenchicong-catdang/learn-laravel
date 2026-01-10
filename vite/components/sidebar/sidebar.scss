@@ -1,0 +1,39 @@
+.sidebar {
+    ul {
+        cursor: pointer;
+        box-shadow: -2px -1px 1px gray;
+        border: 1px solid gray ;
+        list-style-type: none ;
+        padding: 0 ;
+        margin : 0;
+        span {
+            font-weight: bold ;
+            display: block;
+            padding: 10px;
+            // border-bottom: 1px solid #414141 ;
+            background-color: #fcfcfc;
+        }
+        li {
+            display: none;
+            // padding: 10px 20px;
+            background-color: #efefef;
+            &:hover {
+                border-left: 10px solid green;
+            }
+            a {
+                text-decoration: none ;
+                padding: 10px 20px ;
+                display: block;
+                color: black ;
+            }
+        }
+        &:hover {
+            >span {
+            border-left: 5px solid blue; 
+            }
+            >li {
+                display: block;
+            }
+        }
+    }
+}
