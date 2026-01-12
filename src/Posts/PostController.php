@@ -3,18 +3,23 @@
 namespace Src\Posts;
 
 use Src\Posts\Post;
+use Src\Posts\Services\PostService;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Resources\Json\JsonResource;
+use Src\Posts\Resources\PostResource;
 use Src\Posts\Requests\StorePostRequest;
 use Src\Posts\Requests\UpdatePostRequest;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class PostController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(PostService $service): JsonResource
     {
-        //
+        $posts = $service->index();
+        return PostResource::collection($posts);
     }
 
     /**
@@ -28,17 +33,19 @@ class PostController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StorePostRequest $request)
+    public function store(StorePostRequest $request, PostService $postService)
     {
-        //
+        $postService->store($request->validated());
+        return response()->json('', 201);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(Post $post)
+    public function show(int $id, PostService $service): JsonResource
     {
-        //
+        $post = $service->show($id);
+        return PostResource::make($post);
     }
 
     /**
@@ -52,10 +59,12 @@ class PostController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdatePostRequest $request, Post $post)
+    public function update(UpdatePostRequest $request, Post $post, PostService $service): JsonResponse
     {
-        //
+        $service->update($request->validated(), $post);
+        return response()->json('', 200);
     }
+        //
 
     /**
      * Remove the specified resource from storage.
