@@ -63,6 +63,18 @@ return [
             ]) : [],
         ],
 
+        // Kết nối dành riêng cho WordPress
+        'wordpress' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', '127.0.0.1'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'prefix' => env('DB_WP_PREFIX', 'wp_'), // Luôn dùng wp_
+            'charset' => 'utf8mb4',
+            'collation' => 'utf8mb4_unicode_ci',
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),
